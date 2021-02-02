@@ -1,0 +1,62 @@
+@import "utils";
+
+.slider {
+  margin: 0 -20px;
+
+  &__item {
+    padding: 35px 15px 25px;
+    margin: 0 20px 10px;
+    box-shadow: 0 2.00325px 6.00976px rgba(0, 0, 0, 0.25);
+    border-radius: 4.0065px;
+    background: #fff;
+    position: relative;
+  }
+
+  &__heart {
+    height: 30px;
+    width: 30px;
+    background: url('../images/heart-empty.svg') center no-repeat;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+
+    &--is-wish {
+      background: url('../images/heart.svg') center no-repeat;
+    }
+  }
+
+  &__item-img {
+    margin: 0 auto;
+  }
+
+  &__item-stars {
+    margin: 0 auto 10px;
+  }
+
+  &__item-line {
+    margin-bottom: 27px;
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__item-text {
+    text-align: center;
+  }
+
+  &__item-price {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .slick-arrow {
+    background-color: $tertiary-color;
+    border-radius: 10px;
+  }
+}

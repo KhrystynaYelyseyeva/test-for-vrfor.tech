@@ -1,0 +1,30 @@
+@import "utils";
+
+.nav {
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+
+    @include hover(text-decoration, underline);
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: $label-color;
+  }
+}

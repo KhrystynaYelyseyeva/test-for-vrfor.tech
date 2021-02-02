@@ -1,0 +1,13 @@
+@mixin crossBrowser($property, $value) {
+  -webkit-#{$property} : $value;
+  -moz-#{$property} : $value;
+  -o-#{$property} : $value;
+  #{$property} : $value;
+}
+
+@mixin hover($_property, $_toValue) {
+  @include crossBrowser(transition, #{$_property} 0.3s);
+  &:hover {
+    @include crossBrowser(#{$_property}, $_toValue);
+  }
+}

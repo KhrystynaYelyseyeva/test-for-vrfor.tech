@@ -1,0 +1,33 @@
+@import "utils";
+
+.section {
+  background: linear-gradient(0deg, #fff 53%, $secondary-color 53%);
+  padding: 0 15px 20px;
+
+  @media (min-width: 768px) {
+    padding: 0 60px 100px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    padding: 20px 30px;
+
+    @media (min-width: 768px) {
+      margin-left: 137px;
+      padding: 55px 70px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        background: #EC3C24;
+        border-radius: 5px;
+        top: 50%;
+        left: 0;
+      }
+    }
+  }
+}

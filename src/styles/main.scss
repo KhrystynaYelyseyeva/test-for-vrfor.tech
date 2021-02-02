@@ -1,0 +1,29 @@
+@import "utils";
+@import "reset";
+
+@import "header";
+@import "slider";
+@import "section";
+@import "announcement";
+@import "nav";
+@import "burger";
+@import "close-burger";
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: $label-color;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}

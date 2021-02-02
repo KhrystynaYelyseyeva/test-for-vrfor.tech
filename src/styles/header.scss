@@ -1,0 +1,139 @@
+@import "utils";
+
+.header {
+  &__top {
+    padding: 13px 10px;
+    background: $secondary-color;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      padding: 13px 30px 13px 40px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__top-left {
+    margin-bottom: 15px;
+
+    @media (min-width: 768px) {
+      width: 310px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__top-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__top-link {
+    font-weight: 500;
+    font-size: 12px;
+    color: $label-color;
+  }
+
+  &__top-input {
+    width: 100%;
+    padding: 13px 10px;
+    border: 1.2px solid #9BAAAE;
+    border-radius: 6px;
+
+    ::placeholder {
+      font-size: 16px;
+    }
+  }
+
+  &__top-right {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__top-btn {
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: $label-color;
+    border-radius: 4px;
+    padding: 15px 60px 15px 20px;
+    display: inline-block;
+
+    @media (min-width: 768px) {
+      padding: 15px 55px 15px 15px;
+    }
+
+    @include hover(transform, scale(1.02));
+  }
+
+  &__top-btn + &__top-btn {
+    margin-left: 15px;
+  }
+
+  &__top-cart {
+    background: $tertiary-color url("../images/shopping-cart-empty.svg") 85px center no-repeat;
+
+    &--is-full {
+      background-image: url("../images/shopping-cart.svg");
+    }
+  }
+
+  &__top-log {
+    background: $tertiary-color url("../images/login.svg") 75px center no-repeat;
+  }
+
+  &__nav {
+    padding: 24px;
+    border-bottom: 1px solid #C4C4C4;
+    margin-bottom: 24px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      height: 100%;
+      padding: 80px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      background: $secondary-color;
+
+      transform: translateX(100%);
+      transition: 0.3s linear;
+      z-index: 10;
+    }
+  }
+
+  &__nav--active {
+    @media (max-width: 767px) {
+      transform: translateX(0);
+    }
+  }
+
+  &__burger {
+    margin: 10px 20px;
+    width: 28px;
+    height: 21px;
+    position: relative;
+    display: block;
+
+    order: -1;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__close-burger {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+}
