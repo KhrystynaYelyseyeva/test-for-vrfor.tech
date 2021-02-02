@@ -1,5 +1,3 @@
-# Eco cosmetics landing page
-
 - Tech stack: HTML, SASS, JS(hamburger button), BEM methodology, Slick(slider).
 - All buttons and links are interactive.
 - Fully responsive design was made my using Flexbox.
